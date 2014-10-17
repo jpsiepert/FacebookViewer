@@ -49,7 +49,7 @@ passport.deserializeUser(function(obj, done){
 
 app.get("/me", function(req, res){
 	console.log(req.user)
-	return req.user
+	res.status(200).send(JSON.stringify(req.user));
 })
 
 
